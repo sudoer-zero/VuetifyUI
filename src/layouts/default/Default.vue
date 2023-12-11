@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <default-bar />
-
+    <default-bar v-if="$route.path !== '/'" />
     <default-view />
   </v-app>
 </template>

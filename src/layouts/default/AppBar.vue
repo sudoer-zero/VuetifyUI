@@ -1,13 +1,13 @@
 <template>
-  <v-container>
-    <v-responsive class="align-center text-center">
-      <v-row class="d-flex align-center justify-center py-2">
-        <v-col cols="auto">
-          <v-btn @click="toggleTheme" color="accent">{{ theme.global.current.value.dark ? 'Light' : 'Dark' }}</v-btn>
-        </v-col>
-      </v-row>
-    </v-responsive>
-  </v-container>
+  <v-app-bar>
+      <img src="@/assets/logo.svg"
+        class="flex-shrink-0 ml-6"
+        style="width: 40px; height: 40px;" />
+       <h2 class="ml-2">Vuetify UI</h2>
+      <v-spacer></v-spacer>
+      <v-btn text @click="$router.push('/')">Home</v-btn>
+      <v-btn @click="toggleTheme" color="primary"> theme </v-btn>
+    </v-app-bar>
 </template>
 
 <script setup>
